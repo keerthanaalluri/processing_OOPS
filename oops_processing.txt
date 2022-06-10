@@ -1,0 +1,46 @@
+class Circle
+{
+  int position;
+  int speed;
+  int initial_speed=0;
+  int radius;
+  Circle(int position,int speed,int radius)
+  {
+    this.position = position;
+    this.speed = speed;
+    this.radius = radius;
+  }
+  public void move()
+  {
+    initial_speed += speed;
+  }
+  void display()
+  {
+      ellipse(initial_speed,position,radius,radius);
+      //initial_speed+=speed;
+  }
+  
+};
+Circle circle1 = new Circle(200,1,100);
+Circle circle2 = new Circle(400,2,100);
+Circle circle3 = new Circle(600,3,100);
+Circle circle4 = new Circle(800,4,100);
+
+
+void setup() 
+{
+  size(1000,1000);
+}
+void draw()
+{
+  
+  circle1.display();
+  circle1.move();
+   circle2.display();
+  circle2.move();
+   circle3.display();
+  circle3.move();
+   circle4.display();
+  circle4.move();
+  
+}
